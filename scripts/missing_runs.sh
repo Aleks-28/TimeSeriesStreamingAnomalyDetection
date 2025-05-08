@@ -1,0 +1,65 @@
+#!/bin/bash
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 100 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 100 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 100 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 100 --sliding_window_factor 0.005
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 100 --sliding_window_factor 0.01
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 100 --sliding_window_factor 0.01
+python run.py --runs 10 --model LODASALMON --dataset_name comut8 --observation_period 100 --sliding_window_factor 0.01
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 100 --sliding_window_factor 0.01
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 100 --sliding_window_factor 0.01
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 100 --sliding_window_factor 0.1
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 100 --sliding_window_factor 0.1
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 100 --sliding_window_factor 0.1
+python run.py --runs 10 --model SDOs --dataset_name insectsIncrGrd --observation_period 100 --sliding_window_factor 0.1
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 100 --sliding_window_factor 0.1
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 100 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 100 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 100 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 100 --sliding_window_factor 0.2
+
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 500 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 500 --sliding_window_factor 0.005
+
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 500 --sliding_window_factor 0.01
+
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 500 --sliding_window_factor 0.1
+
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 500 --sliding_window_factor 0.2
+
+python run.py --runs 10 --model LODASALMON --dataset_name comut16 --observation_period 1000 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 1000 --sliding_window_factor 0.005
+
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 1000 --sliding_window_factor 0.01
+
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 1000 --sliding_window_factor 0.1
+
+python run.py --runs 10 --model xStream --dataset_name insectsIncrGrd --observation_period 1000 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name insectsIncrRecr --observation_period 1000 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name swan --observation_period 1000 --sliding_window_factor 0.2
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 5000 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 5000 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 5000 --sliding_window_factor 0.005
+python run.py --runs 10 --model xStream --dataset_name insectsIncrGrd --observation_period 5000 --sliding_window_factor 0.005
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 5000 --sliding_window_factor 0.01
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 5000 --sliding_window_factor 0.01
+python run.py --runs 10 --model LODASALMON --dataset_name comut8 --observation_period 5000 --sliding_window_factor 0.01
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 5000 --sliding_window_factor 0.01
+python run.py --runs 10 --model xStream --dataset_name insectsIncrGrd --observation_period 5000 --sliding_window_factor 0.01
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 5000 --sliding_window_factor 0.1
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 5000 --sliding_window_factor 0.1
+python run.py --runs 10 --model LODASALMON --dataset_name comut8 --observation_period 5000 --sliding_window_factor 0.1
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 5000 --sliding_window_factor 0.1
+python run.py --runs 10 --model xStream --dataset_name insectsIncrGrd --observation_period 5000 --sliding_window_factor 0.1
+
+python run.py --runs 10 --model xStream --dataset_name comut4 --observation_period 5000 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name comut8 --observation_period 5000 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name comut16 --observation_period 5000 --sliding_window_factor 0.2
+python run.py --runs 10 --model xStream --dataset_name insectsIncrGrd --observation_period 5000 --sliding_window_factor 0.2
