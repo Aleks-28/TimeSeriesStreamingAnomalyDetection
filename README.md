@@ -103,29 +103,3 @@ To define a new evaluation metric:
    ```python
    all = ['AUCPR', 'AUCROC', 'VUSPR', 'VUSROC', 'RefMetrics', 'MyNewMetric']
    ```
-
----
-
-## 📓 Notebooks
-
-Exploratory analysis and result visualization are available in the `notebooks/` directory. The most comprehensive one is:
-
-- `result_analysis.ipynb`: Demonstrates result extraction from `.pkl` files.
-
----
-
-## 🧑‍💻 Contributors
-
-- Developed during a research internship at EDF R&D
-
----
-
-## 📄 License
-
-This project may be subject to EDF's internal licensing. Please consult with the maintainers before reuse or distribution.
-
----
-
-## 📬 Contact
-
-For questions or contributions, please contact the original developer or open an issue on this repository.
