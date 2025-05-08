@@ -1,6 +1,6 @@
 # Streaming Multivariate Anomaly Detection Benchmark
 
-This repository contains the code and resources for a **streaming anomaly detection benchmark** developed during an internship at **EDF R&D**. The benchmark evaluates different models for detecting anomalies in multivariate time-series data under streaming constraints.
+This repository contains the code and resources for a **streaming anomaly detection benchmark** developed during my internship at **EDF R&D**. The benchmark evaluates different models for detecting anomalies in multivariate time-series data under streaming constraints.
 
 ---
 
