@@ -1,31 +1,131 @@
-## Streaming Multivariate Anomaly Detection Benchmark
+# Streaming Multivariate Anomaly Detection Benchmark
 
-This repositery contains code for the streaming anomaly detection benchmark conducted during an internship at EDF R&D.
+This repository contains the code and resources for a **streaming anomaly detection benchmark** developed during an internship at **EDF R&D**. The benchmark evaluates different models for detecting anomalies in multivariate time-series data under streaming constraints.
 
-# Requirements
-- g++ compile or C++ buildtools for windows (library is untested on windows)
-- conda for environment management (mandatory to use the included installation scripts)
+---
 
-To reproduce the results, install the three environments (one for plotting, one for dSalmon library and one for Online Isolation Forest) using the scritps/install_env.sh.
+## 📦 Requirements
 
-Instructions for downloading the data are given in utils/data_loaders.
+- `g++` compiler or C++ build tools (Note: the library is **untested on Windows**)
+- [Anaconda](https://www.anaconda.com/) or Miniconda (mandatory to use provided environment scripts)
 
-The repo contains the following folders :
-- *images* are generated images for the result analysis
-- *notebooks* contains various notebooks used during the project. The most thorough one is result_analysis that show an example of result extraction from .pkl files.
-- *scripts* contains small scripts used for the INRIA server job scheduling, as well as scripts for analyzing logs and generating missing jobs command lines.
-- *src* contains the source code for the benchmark main framework. The main loop for testing is in src/runner.py.
+---
 
+## 🛠 Installation
 
-To run the benchmark, run the following command: `python run.py --runs 10 --model SWKNN --dataset_name comut4 --observation_period 100 --sliding_window_factor 0.01`
-For launching parallel experiments on multiple cores, first generate jobs with scripts/generate_jobs.py, then launch them with run_multiproc.py.
+To set up the required environments, run the following script:
 
-# Adding a model
+```bash
+scripts/install_env.sh
+```
 
-To add a model, first create a .py file in the src/models, following the template in src/templates/model.py
-The model name must then be added in the src/models/__init__.py import list .
-The experiments can afterwards be launched normally using the name of the class (case sensitive) as model name.
+This will install three conda environments:
+- One for plotting
+- One for the `dSalmon` C++ library
+- One for Online Isolation Forest
 
-# Adding a metric
-For adding a metric, create a .py files named with metric following the src/templates/metric.py template.
-Import the newly added metric to the list: __all__ = ['AUCPR', 'AUCROC', 'VUSPR', 'VUSROC', 'RefMetrics', *'MyNewMetric'*] in src/metrics/__init__.py.
+**Data Download:**  
+Instructions for downloading the datasets are available in `utils/data_loaders/`.
+
+---
+
+## 📁 Repository Structure
+
+```text
+.
+├── images/              # Generated plots and result visualizations
+├── notebooks/           # Jupyter notebooks for analysis (see `result_analysis.ipynb`)
+├── scripts/             # Job scheduling, log analysis, and batch processing scripts
+├── src/                 # Core benchmarking framework (main loop in `runner.py`)
+├── utils/               # Utilities including dataset loaders
+├── run.py               # Main entry point for running experiments
+├── run_multiproc.py     # Script for launching parallel jobs
+└── README.md            # You're here!
+```
+
+---
+
+## 🚀 Running the Benchmark
+
+Use the following command to run the benchmark:
+
+```bash
+python run.py --runs 10 --model SWKNN --dataset_name comut4 --observation_period 100 --sliding_window_factor 0.01
+```
+
+---
+
+## 🧵 Running Parallel Experiments
+
+To launch experiments in parallel:
+
+1. **Generate jobs**:
+   ```bash
+   python scripts/generate_jobs.py
+   ```
+
+2. **Run the jobs** using multiprocessing:
+   ```bash
+   python run_multiproc.py
+   ```
+
+---
+
+## ➕ Adding a New Model
+
+To include a new model:
+
+1. Create a new Python file in `src/models/` following the template:
+   ```bash
+   src/templates/model.py
+   ```
+2. Register the model in `src/models/__init__.py`:
+   ```python
+   from .MyNewModel import MyNewModel
+   ```
+
+3. Use the class name as the `--model` argument in `run.py`.
+
+> **Note:** The model class name is **case-sensitive**.
+
+---
+
+## 📊 Adding a New Metric
+
+To define a new evaluation metric:
+
+1. Create a new file in `src/metrics/` based on:
+   ```bash
+   src/templates/metric.py
+   ```
+
+2. Add your metric to the `all` list in `src/metrics/__init__.py`:
+   ```python
+   all = ['AUCPR', 'AUCROC', 'VUSPR', 'VUSROC', 'RefMetrics', 'MyNewMetric']
+   ```
+
+---
+
+## 📓 Notebooks
+
+Exploratory analysis and result visualization are available in the `notebooks/` directory. The most comprehensive one is:
+
+- `result_analysis.ipynb`: Demonstrates result extraction from `.pkl` files.
+
+---
+
+## 🧑‍💻 Contributors
+
+- Developed during a research internship at EDF R&D
+
+---
+
+## 📄 License
+
+This project may be subject to EDF's internal licensing. Please consult with the maintainers before reuse or distribution.
+
+---
+
+## 📬 Contact
+
+For questions or contributions, please contact the original developer or open an issue on this repository.
